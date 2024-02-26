@@ -7,11 +7,11 @@ This code can be adapted to search for any foreign reads within a series of SRA 
 
 We screened SRA read sets for two potenital _Syntretus_ hosts including _Drosophila_ and _Apis_. We have created folders containing the code, SRA accessions and Mitochondrial references for both. Additionally, _Syntretus_ and _Apis_ share sequence similarity due to being relatively closely related (i.e. both are Hymenopterans). Therefore, it required a more sensitive approach to cleanly seperate _Syntretus_ reads from _Apis cerana_ reads. We created a seperate folder for this code as well. Descriptions for each folder are included below.
 
-## Syntretus_Drosophila Folder
+## Drosophila_Syntretus_Mapping Folder
 In this folder we have included the code (Drosophila_Syntretus_mapping.sh), the list of SRA accessions (DEST_SRA.txt), and the mitochondrial genomes of both _Syntretus perlmani_ and _Drosophila melanogaster_ (Drosophila_Syntretus_Mitochondria.fasta). We included the _Drosophila melanogaster_ mitochondrial genome in the mapping process to act as a positive control. All SRA reads were acquired from **Drosophila Evolution over Space and Time** databse published by Kapun et al., 2021.
 
-## Syntretus_Apis Folder
+## Apis_Syntretus_Mapping Folder
 In this folder we have included the code (Apis_Syntretus_mapping.sh), the list of SRA accessions (Apis_cerana_SRA.txt), and the mitochondrial genomes of both _Syntretus perlmani_ and _Apis cerana_ (Apis_Syntretus_Mitochondria.fasta). We included the _Apis cerana_ mitochondrial genome in the mapping process to act as a positive control.
 
-## Syntretus_Apis_Sensitive Folder
+## Apis_Syntretus_Mapping_Sensitive Folder
 In this folder we have included the code (Apis_sensitive_mapping.sh), the _Apis cerana_ mitochondrial genome (Apis_cerana_mitochondria.fasta), and the _Syntretus perlmani_ mitochondrial genome (Syntretus_perlmani_mitochondria.fasta). Due to the similaritie between the _Syntretus_ and _Apis_ mitochondrial genomes, we seperated the mapping into two steps. The first step was to map reads with high similarity to just the _Apis cerana_ mitochondrial genome and output 'unmapped reads' only. The second step was to map the 'unmappped reads' against the _Syntretus perlmani_ mitochondrial genome with a low threshold for similarity and output 'mapped reads' only. This final 'mapped reads' output consists of just reads belonging to _Syntretus_.
