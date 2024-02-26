@@ -1,2 +1,2 @@
-# Syntretus_Hunting
-This repository provides the code used to identify Syntretus infections using publicly available sequence data of known hosts.
+# Identifying Syntretus infections
+Several thousands of insects are sampled from the wild each year to have their genomes sequences. Often times, the researchers producing this sequence data will also unknowingly produce sequence data of other passengers (e.g. viruses, microbial symbionts and parasites). These unintended (but fortunate) outcomes can be a treasure trove for researchers who study these insects as hosts as it can provide not only sequencing data of the passenger, but also expand our understanding of host range and geographic range of the passenger. For the purposes of this study, we sought to identify _Syntretus_ [Braconidae:Euphorinae] wasp infections in two know hosts including _Drosophila_ and _Apis_ _cerena_. We suspected that some SRA read sets of these wild-collected hosts would also 
