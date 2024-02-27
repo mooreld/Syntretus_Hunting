@@ -12,7 +12,7 @@ file_path="Apis_cerana_SRA.txt"
 #This code trims the white space at the end of each accession which was added with each return (\r)
 sed -i 's/\r$//' "$file_path"
 
-#'While loop' that reads each SRA accession line by line, downloads the given accession, runs the read files through bbmap and then deletes them when finished
+#'While loop' that reads each SRA accession line by line, downloads the given accession as split read files, runs the split read files through bbmap and then deletes them when finished
 while IFS= read -r line || [[ -n "$line" ]]
 do
  fasterq-dump "$line" --split-files
