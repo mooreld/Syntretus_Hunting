@@ -6,10 +6,13 @@ cd /<directory>/
 module load ncbi-sra/3.0.2
 module load BBmap
 
+#Stores our list of SRA accessions as a variable
 file_path="Apis_cerana_SRA.txt"
 
+#This code trims the white space at the end of each accession which was added with each return (\r)
 sed -i 's/\r$//' "$file_path"
 
+#'While loop' that reads each SRA accession line by line, downloads the given accession, runs the read files through bbmap and then deletes them when finished
 while IFS= read -r line || [[ -n "$line" ]]
 do
  fasterq-dump "$line" --split-files
